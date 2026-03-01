@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Patient – Hospital Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f5f9ff; padding: 2rem; }
+    form { max-width: 600px; margin: auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+    label { display: block; margin: 1rem 0 0.5rem; font-weight: 600; }
+    input, select, button {
+      width: 100%; padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px;
+    }
+    button { background: #005b96; color: #fff; border: none; margin-top: 1.5rem; cursor: pointer; }
+    button:hover { background: #00447a; }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;"><i class="fas fa-user-plus"></i> Add New Patient</h1>
+  <form method="POST" action="CreatePatient">
+    <label for="name">Patient Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter patient's name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" placeholder="Enter age" min="0" required>
+
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="blood">Blood Type</label>
+    <input type="text" id="blood" name="blood" placeholder="e.g., A+, O-, B+" required>
+
+    <label for="symptom">Symptoms</label>
+    <input type="text" id="symptom" name="symptom" placeholder="Describe symptoms" required>
+
+    <label for="disease">Diagnosed Disease</label>
+    <input type="text" id="disease" name="disease" placeholder="Disease diagnosed" required>
+
+    <label for="doctor_id">Referred Doctor</label>
+    <input type="number" id="doctor_id" name="doctor_id" placeholder="Doctor id" required>
+      <!--<option value="">Select Doctor</option>
+      <option value="1">Dr. A. Sharma (ID 1)</option>
+      <option value="2">Dr. B. Mehta (ID 2)</option>
+      <option value="3">Dr. C. Khan (ID 3)</option>
+      <!-- Replace with your actual doctor IDs 
+    </select>-->
+
+    <button type="submit">Add Patient</button>
+  </form>
+
+</body>
+</html>

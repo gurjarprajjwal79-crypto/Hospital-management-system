@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Register Assistant - Hospital Management System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9ff;
+    padding: 40px 20px;
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+    color: #005b96;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  #form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  input.form-control {
+    font-size: 18px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+
+  input.form-control:focus {
+    border-color: #005b96;
+    box-shadow: 0 0 6px rgba(0,91,150,0.3);
+    outline: none;
+  }
+
+  input[type="submit"].form-control {
+    background-color: #005b96;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"].form-control:hover {
+    background-color: #00447a;
+  }
+</style>
+</head>
+<body>
+
+<h1>Register Assistant</h1>
+
+<form id="form" action="/MyWebApp/CreateAssistant" method="POST" class="form-group">
+  <input class="form-control" type="text" name="name" placeholder="Name" required />
+  <input class="form-control" type="text" name="email" placeholder="Email" required />
+  <input class="form-control" type="number" name="phone" placeholder="Phone" required />
+  <input class="form-control" type="password" name="pwd" placeholder="Password" required />
+  <input class="form-control" type="submit" value="Sign Up" />
+</form>
+
+</body>
+</html>

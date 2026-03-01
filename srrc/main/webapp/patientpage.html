@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-blue: #005b96;
+      --primary-red: #d32f2f;
+      --secondary-blue: #4285f4;
+      --light-bg: #f5f9ff;
+      --white: #ffffff;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-red) 100%);
+      color: var(--white);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 38px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--white);
+      border: 2px solid var(--secondary-blue);
+      border-radius: 15px;
+      text-align: center;
+      padding: 25px 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-color: var(--primary-red);
+    }
+
+    .card i {
+      font-size: 48px;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-red) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: var(--primary-blue);
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-red) 100%);
+      color: var(--white);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <!-- PROPER hospital logo with medical cross -->
+    <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Hospital Logo">
+  </div>
+  <h1>Hospital Management System</h1>
+</header>
+
+<section class="menu">
+  <!--  <div class="card" onclick="window.location.href='adddoctor.html'" style="cursor: pointer;">
+    <i class="fas fa-user-md"></i>
+    <h3>Add Doctor</h3>
+  </div>
+
+  <div class="card" onclick="window.location.href='addpatient.html'" style="cursor: pointer;">
+    <i class="fas fa-user-plus"></i>
+    <h3>Add Patient</h3>
+  </div>
+
+  <div class="card" onclick="window.location.href='addmedicine.html'" style="cursor: pointer;">
+    <i class="fas fa-pills"></i>
+    <h3>Add Medicine</h3>
+  </div>-->
+  
+  <div class="card" onclick="window.location.href='getAppointment.html'" style="cursor: pointer;">
+    <i class="fas fa-calendar-days"></i>
+    <h3>Get Appointment</h3>
+  </div>
+
+  <div class="card" onclick="window.location.href='getDoctor.html'" style="cursor: pointer;">
+    <i class="fas fa-stethoscope"></i>
+    <h3>View Doctor</h3>
+  </div>
+
+  <!--<div class="card" onclick="window.location.href='getPatients.html'" style="cursor: pointer;">
+    <i class="fas fa-procedures"></i>
+    <h3>View Patient</h3>
+  </div>-->
+
+  <div class="card" onclick="window.location.href='getMedicine.html'" style="cursor: pointer;">
+    <i class="fas fa-clinic-medical"></i>
+    <h3>Medicine Store</h3>
+  </div>
+  
+  <!--  <div class="card" onclick="window.location.href='checkAppointment.html'" style="cursor: pointer;">
+    <i class="fas fa-book"></i>
+    <h3>Check Appointments</h3>
+  </div>
+
+  <div class="card" onclick="window.location.href='discharge.html'" style="cursor: pointer;">
+    <i class="fas fa-hospital-user"></i>
+    <h3>Discharge</h3>
+  </div>-->
+
+  <div class="card" onclick="window.location.href='logout.html'" style="cursor: pointer;">
+    <i class="fas fa-sign-out-alt"></i>
+    <h3>Logout</h3>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Hospital Management System. All rights reserved.
+</footer>
+
+</body>
+</html>

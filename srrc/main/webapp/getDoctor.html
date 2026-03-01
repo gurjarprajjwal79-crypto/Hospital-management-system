@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Show Doctors - Hospital Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f9ff;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #005b96;
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #d32f2f;
+      color: white;
+      font-size: 18px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b71c1c;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #dddddd;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #005b96;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #box {
+      margin-top: 20px;
+    }
+  </style>
+
+  <script>
+  function doc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        document.getElementById("box").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "RetrieveDoctor", true);
+    xhttp.send();
+  }
+</script>
+
+</head>
+<body>
+
+  <h2><i class="fas fa-user-md"></i> View All Doctors</h2>
+
+  <div class="btn-container">
+    <button onclick="doc()">Load Doctor Records</button>
+  </div>
+
+  <div id="box">
+    <!-- Doctor data will appear here -->
+  </div>
+
+</body>
+</html>

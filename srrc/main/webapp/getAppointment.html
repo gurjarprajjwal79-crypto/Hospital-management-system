@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Appointment - Hospital Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f9ff;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #005b96;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 5px;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #005b96;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00447a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="fas fa-calendar-check"></i> Book Appointment</h1>
+  <form id="getAppointment" method="post" action="/MyWebApp/CreateAppointment">
+    <label for="patientName">Patient Name</label>
+    <input type="text" id="patientName" name="patientName" placeholder="Enter patient name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+    <label for="phone">Phone</label>
+    <input type="number" id="phone" name="phone" placeholder="Enter phone number" required>
+
+    <label for="doctor">Select Doctor</label>
+    <input id="doctor" name="doctor" placeholder="Enter doctor name" required>
+      <!-- <option value="" disabled selected>Select a doctor</option>
+      <option value="Dr. Smith">Dr. Smith</option>
+      <option value="Dr. Johnson">Dr. Johnson</option>
+      <option value="Dr. Lee">Dr. Lee</option>-->
+      <!-- More doctors can be dynamically added 
+    </select>-->
+
+    <label for="date">Appointment Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Appointment Time</label>
+    <input type="time" id="time" name="time" required>
+
+    <button type="submit">Book Appointment</button>
+  </form>
+
+</body>
+</html>

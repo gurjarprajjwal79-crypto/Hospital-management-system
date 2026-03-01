@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hospital Management System - Home</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3R0pPCnxlA1y1RG8+0Uv6Y/FhJiZQnEhv5ovjS5N25QF5xvJV" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9ff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #assistant {
+    text-align: center;
+  }
+
+  #assistant button {
+    font-size: 20px;
+    padding: 12px 30px;
+    margin: 15px 0;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  #assistant button.btn-success:hover {
+    background-color: #19692c; /* slightly darker green */
+  }
+</style>
+<script>
+  function fun(link) {
+    window.location = link;  
+  }
+</script>
+</head>
+<body>
+
+  <div id="assistant">
+    <button class="btn btn-success" type="button" onclick="fun('login.html')">LOGIN</button><br/>
+    <button class="btn btn-success" type="button" onclick="fun('newAssistant.html')">NEW ACCOUNT</button>
+  </div>
+
+</body>
+</html>
